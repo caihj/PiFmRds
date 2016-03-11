@@ -80,6 +80,12 @@ One way to measure the ppm error is to play the `pulses.wav` file: it will play 
 
 If you use the argument `-audio -`, Pi-FM-RDS reads audio data on standard input. This allows you to pipe the output of a program into Pi-FM-RDS. For instance, this can be used to read MP3 files using Sox:
 
+install sox
+```
+sudo apt-get install sox libsox-fmt-all
+```
+
+
 ```
 sox -t mp3 http://www.linuxvoice.com/episodes/lv_s02e01.mp3 -t wav -  | sudo ./pi_fm_rds -audio -
 ```
